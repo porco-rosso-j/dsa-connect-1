@@ -13,8 +13,6 @@ logs
 results
 tmp
 
-dist/*
-!dist/package.json
 dev/test.js
 
 # Optional npm cache directory
