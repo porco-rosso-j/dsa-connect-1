@@ -1,6 +1,6 @@
 import { AbiItem } from 'web3-utils'
 
-export const instapool_v2: AbiItem[] = [
+export const flashpool_v2: AbiItem[] = [
   {
     anonymous: false,
     inputs: [

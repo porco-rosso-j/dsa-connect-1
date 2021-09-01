@@ -12,7 +12,6 @@ export * as index from './indexItem'
 export * as list from './list'
 export * as read from './read'
 
-
 import { account as accountV1} from './v1/account'
 import * as connectorsV1 from './v1/connector'
 import * as eventsV1 from './v1/events'
@@ -33,6 +32,7 @@ export const core = {
     list,
     read,
     versions: {
+      
       1: {
         account: accountV1,
         connectors: connectorsV1,

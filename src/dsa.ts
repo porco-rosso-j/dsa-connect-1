@@ -8,7 +8,7 @@ import { Internal, Version } from './internal'
 import { Spells } from './spells'
 import { Transaction, TransactionCallbacks } from './transaction'
 import { wrapIfSpells } from './utils'
-import { Instapool_v2 } from './resolvers/instapool_v2'
+import { Flashpool_v2 } from './resolvers/flashpool_v2'
 import { Erc20 } from './utils/erc20'
 
 type DSAConfig =
@@ -105,7 +105,7 @@ export class DSA {
   readonly internal = new Internal(this)
   readonly castHelpers = new CastHelpers(this)
   readonly transaction = new Transaction(this)
-  readonly instapool_v2 = new Instapool_v2(this)
+  readonly flashpool_v2 = new Flashpool_v2(this)
   readonly accounts = new Accounts(this)
 
   // Aliases

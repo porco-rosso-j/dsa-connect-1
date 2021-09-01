@@ -2,44 +2,6 @@ import { AbiItem } from 'web3-utils'
 
 export const AUTHORITY_A: AbiItem[] = [
   {
-    anonymous: false,
-    inputs: [
-      {
-        indexed: true,
-        internalType: 'address',
-        name: '_msgSender',
-        type: 'address',
-      },
-      {
-        indexed: true,
-        internalType: 'address',
-        name: '_authority',
-        type: 'address',
-      },
-    ],
-    name: 'LogAddAuth',
-    type: 'event',
-  },
-  {
-    anonymous: false,
-    inputs: [
-      {
-        indexed: true,
-        internalType: 'address',
-        name: '_msgSender',
-        type: 'address',
-      },
-      {
-        indexed: true,
-        internalType: 'address',
-        name: '_authority',
-        type: 'address',
-      },
-    ],
-    name: 'LogRemoveAuth',
-    type: 'event',
-  },
-  {
     inputs: [
       {
         internalType: 'address',

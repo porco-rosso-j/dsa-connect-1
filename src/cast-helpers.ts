@@ -80,7 +80,7 @@ export class CastHelpers {
     return encodedAbi
   }
 
-  
+    
   flashBorrowSpellsConvert = (params: Spells): Spells => {
     const arr = params.data;
     const spellsLength = arr.length;
@@ -90,13 +90,14 @@ export class CastHelpers {
     let isFlashloanPool = false
     for (let i = 0; i < spellsLength; i++) {
       const a = arr[i];
-      if (a.connector === "instapool_v2" && a.method === "flashBorrow"  && !isFlashloanPool) {
+      
+      if (a.connector === "flashpool_v2" && a.method === "flashBorrow"  && !isFlashloanPool) {
         isFlashloanPool = true
         flashBorrowArgs.push(...a.args)
         continue
       }
 
-      if (a.connector === "instapool_v2" && a.method === "flashBorrow" && isFlashloanPool) {
+      if (a.connector === "flashpool_v2" && a.method === "flashBorrow" && isFlashloanPool) {
         const subSpells = this.dsa.Spell()
         arr.slice(i, spellsLength).forEach(b => subSpells.add(b))
 
@@ -106,14 +107,15 @@ export class CastHelpers {
         spells2.add(encodedFlashloanSpells.data[0])
         continue
       }
+      
 
-      if (a.connector === "instapool_v2" && a.method === "flashPayback" && isFlashloanPool) {
+      if ( a.connector === "flashpool_v2" && a.method === "flashPayback" && isFlashloanPool) {
         isFlashloanPool = false
         spells2.add(a)
-        const encodedSpells = this.dsa.instapool_v2.encodeFlashCastData(spells2)
+        const encodedSpells = this.dsa.flashpool_v2.encodeFlashCastData(spells2)
 
         spells.add({
-          connector: 'instapool_v2',
+          connector: 'flashpool_v2',
           method: 'flashBorrowAndCast',
           args: [...flashBorrowArgs, encodedSpells],
         })

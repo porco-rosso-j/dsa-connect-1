@@ -3,7 +3,7 @@ import { Spells } from '../spells'
 
 import { Version } from '../internal'
 
-export class Instapool_v2 {
+export class Flashpool_v2 {
   constructor(private dsa: DSA) {}
 
    /**

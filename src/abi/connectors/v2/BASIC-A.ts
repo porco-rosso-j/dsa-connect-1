@@ -1,74 +1,7 @@
 import { AbiItem } from 'web3-utils'
 
 export const BASIC_A: AbiItem[] = [
-  {
-    anonymous: false,
-    inputs: [
-      {
-        indexed: true,
-        internalType: 'address',
-        name: 'erc20',
-        type: 'address',
-      },
-      {
-        indexed: false,
-        internalType: 'uint256',
-        name: 'tokenAmt',
-        type: 'uint256',
-      },
-      {
-        indexed: false,
-        internalType: 'uint256',
-        name: 'getId',
-        type: 'uint256',
-      },
-      {
-        indexed: false,
-        internalType: 'uint256',
-        name: 'setId',
-        type: 'uint256',
-      },
-    ],
-    name: 'LogDeposit',
-    type: 'event',
-  },
-  {
-    anonymous: false,
-    inputs: [
-      {
-        indexed: true,
-        internalType: 'address',
-        name: 'erc20',
-        type: 'address',
-      },
-      {
-        indexed: false,
-        internalType: 'uint256',
-        name: 'tokenAmt',
-        type: 'uint256',
-      },
-      {
-        indexed: true,
-        internalType: 'address',
-        name: 'to',
-        type: 'address',
-      },
-      {
-        indexed: false,
-        internalType: 'uint256',
-        name: 'getId',
-        type: 'uint256',
-      },
-      {
-        indexed: false,
-        internalType: 'uint256',
-        name: 'setId',
-        type: 'uint256',
-      },
-    ],
-    name: 'LogWithdraw',
-    type: 'event',
-  },
+
   {
     inputs: [],
     name: 'connectorID',
@@ -82,9 +15,7 @@ export const BASIC_A: AbiItem[] = [
   {
     inputs: [
       { internalType: 'address', name: 'erc20', type: 'address' },
-      { internalType: 'uint256', name: 'tokenAmt', type: 'uint256' },
-      { internalType: 'uint256', name: 'getId', type: 'uint256' },
-      { internalType: 'uint256', name: 'setId', type: 'uint256' },
+      { internalType: 'uint256', name: 'tokenAmt', type: 'uint256' }
     ],
     name: 'deposit',
     outputs: [],
@@ -123,9 +54,7 @@ export const BASIC_A: AbiItem[] = [
     inputs: [
       { internalType: 'address', name: 'erc20', type: 'address' },
       { internalType: 'uint256', name: 'tokenAmt', type: 'uint256' },
-      { internalType: 'address payable', name: 'to', type: 'address' },
-      { internalType: 'uint256', name: 'getId', type: 'uint256' },
-      { internalType: 'uint256', name: 'setId', type: 'uint256' },
+      { internalType: 'address payable', name: 'to', type: 'address' }
     ],
     name: 'withdraw',
     outputs: [],

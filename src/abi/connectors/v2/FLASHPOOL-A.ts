@@ -1,0 +1,137 @@
+import { AbiItem } from 'web3-utils'
+
+export const FLASHPOOL_A: AbiItem[] = [
+{
+   "type":"function",
+   "stateMutability":"payable",
+   "outputs":[],
+   "name":"flashBorrowAndCast",
+   "inputs":[
+      {
+         "type":"address",
+         "name":"token",
+         "internalType":"address"
+      },
+      {
+         "type":"uint256",
+         "name":"amt",
+         "internalType":"uint256"
+      },
+      {
+         "type":"uint256",
+         "name":"route",
+         "internalType":"uint256"
+      },
+      {
+         "type":"bytes",
+         "name":"data",
+         "internalType":"bytes"
+      }
+   ]
+},
+{
+   "type":"function",
+   "stateMutability":"payable",
+   "outputs":[
+      {
+         "type":"string",
+         "name":"_eventName",
+         "internalType":"string"
+      },
+      {
+         "type":"bytes",
+         "name":"_eventParam",
+         "internalType":"bytes"
+      }
+   ],
+   "name":"flashMultiBorrowAndCast",
+   "inputs":[
+      {
+         "type":"address[]",
+         "name":"tokens",
+         "internalType":"address[]"
+      },
+      {
+         "type":"uint256[]",
+         "name":"amts",
+         "internalType":"uint256[]"
+      },
+      {
+         "type":"uint256",
+         "name":"route",
+         "internalType":"uint256"
+      },
+      {
+         "type":"bytes",
+         "name":"data",
+         "internalType":"bytes"
+      }
+   ]
+},
+{
+   "type":"function",
+   "stateMutability":"payable",
+   "outputs":[ ],
+   "name":"flashMultiPayback",
+   "inputs":[
+      {
+         "type":"address[]",
+         "name":"tokens",
+         "internalType":"address[]"
+      },
+      {
+         "type":"uint256[]",
+         "name":"amts",
+         "internalType":"uint256[]"
+      }
+   ]
+},
+{
+   "type":"function",
+   "stateMutability":"payable",
+   "outputs":[],
+   "name":"flashPayback",
+   "inputs":[
+      {
+         "type":"address",
+         "name":"token",
+         "internalType":"address"
+      },
+      {
+         "type":"uint256",
+         "name":"amt",
+         "internalType":"uint256"
+      }
+   ]
+},
+{
+   "type":"function",
+   "stateMutability":"view",
+   "outputs":[
+      {
+         "type":"address",
+         "name":"",
+         "internalType":"contract CreamFlashInterface"
+      }
+   ],
+   "name":"creamflash",
+   "inputs":[
+      
+   ]
+},
+{
+   "type":"function",
+   "stateMutability":"view",
+   "outputs":[
+      {
+         "type":"string",
+         "name":"",
+         "internalType":"string"
+      }
+   ],
+   "name":"name",
+   "inputs":[
+      
+   ]
+}
+]
